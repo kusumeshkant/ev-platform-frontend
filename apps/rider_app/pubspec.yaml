@@ -79,6 +79,9 @@ dev_dependencies:
   injectable_generator: ^2.4.1
   bloc_test: ^9.1.5
   mocktail: ^1.0.1
+  flutter_lints: ^3.0.0
+  bloc_test: ^9.1.5
+  mocktail: ^1.0.1
 
 flutter:
   generate: true

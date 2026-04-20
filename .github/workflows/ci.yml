@@ -1,0 +1,126 @@
+name: Flutter CI
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main, develop]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  # ─── Analyze & Test ───────────────────────────────────────────────────────────
+  analyze-and-test:
+    name: Analyze & Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.19.0'
+          channel: 'stable'
+          cache: true
+
+      - name: Install Melos
+        run: dart pub global activate melos
+
+      - name: Melos Bootstrap
+        run: melos bootstrap
+
+      - name: Generate localizations
+        run: melos run gen
+
+      - name: Flutter Analyze (all packages)
+        run: melos analyze
+
+      - name: Flutter Test — rider_app
+        run: |
+          cd apps/rider_app
+          flutter test --coverage
+
+      - name: Flutter Test — hub_app
+        run: |
+          cd apps/hub_app
+          flutter test --coverage
+
+      - name: Flutter Test — admin_panel
+        run: |
+          cd apps/admin_panel
+          flutter test --coverage
+
+  # ─── Build Check — Android ────────────────────────────────────────────────────
+  build-android:
+    name: Build Android (rider_app)
+    runs-on: ubuntu-latest
+    needs: analyze-and-test
+    if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/develop'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.19.0'
+          channel: 'stable'
+          cache: true
+
+      - name: Install Melos
+        run: dart pub global activate melos
+
+      - name: Melos Bootstrap
+        run: melos bootstrap
+
+      - name: Inject brand assets (EcoBike default)
+        run: |
+          mkdir -p apps/rider_app/assets/brand
+          cp brands/brand_ecobike/brand.json apps/rider_app/assets/brand/brand.json
+
+      - name: Build APK (debug)
+        run: |
+          cd apps/rider_app
+          flutter build apk --debug
+
+  # ─── Build Check — Web (admin_panel) ─────────────────────────────────────────
+  build-web:
+    name: Build Web (admin_panel)
+    runs-on: ubuntu-latest
+    needs: analyze-and-test
+    if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/develop'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.19.0'
+          channel: 'stable'
+          cache: true
+
+      - name: Install Melos
+        run: dart pub global activate melos
+
+      - name: Melos Bootstrap
+        run: melos bootstrap
+
+      - name: Inject brand assets
+        run: |
+          mkdir -p apps/admin_panel/assets/brand
+          cp brands/brand_ecobike/brand.json apps/admin_panel/assets/brand/brand.json
+
+      - name: Build Web
+        run: |
+          cd apps/admin_panel
+          flutter build web --release
