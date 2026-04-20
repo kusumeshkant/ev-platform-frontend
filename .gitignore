@@ -1,0 +1,79 @@
+# ─── Secrets & Credentials ─────────────────────────────────────────────────────
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.keystore
+*.jks
+*.p8
+service-account*.json
+google-services.json
+GoogleService-Info.plist
+
+# ─── Brand Assets (injected at CI/CD — never committed) ────────────────────────
+**/assets/brand/
+
+# ─── Flutter / Dart ────────────────────────────────────────────────────────────
+**/.dart_tool/
+**/.packages
+**/.pub-cache/
+**/.pub/
+**/build/
+**/pubspec.lock
+**/.flutter-plugins
+**/.flutter-plugins-dependencies
+**/flutter_export_environment.sh
+
+# Generated code
+*.g.dart
+*.freezed.dart
+*.mocks.dart
+**/l10n/app_localizations*.dart
+
+# ─── Android ───────────────────────────────────────────────────────────────────
+**/android/.gradle/
+**/android/local.properties
+**/android/key.properties
+**/android/app/google-services.json
+**/android/gradle-wrapper.jar
+**/android/captures/
+**/*.apk
+**/*.aab
+
+# ─── iOS / macOS ───────────────────────────────────────────────────────────────
+**/ios/.symlinks/
+**/ios/Pods/
+**/ios/Flutter/flutter_export_environment.sh
+**/ios/Flutter/Generated.xcconfig
+**/ios/Flutter/App.framework
+**/ios/Flutter/Flutter.framework
+**/ios/GoogleService-Info.plist
+**/macos/Pods/
+**/macos/Flutter/GeneratedPluginRegistrant.swift
+**/*.xcworkspace/xcuserdata/
+**/*.xcodeproj/xcuserdata/
+
+# ─── Melos ─────────────────────────────────────────────────────────────────────
+.melos_tool/
+
+# ─── IDE ───────────────────────────────────────────────────────────────────────
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+*.swp
+*.swo
+*~
+
+# ─── OS ────────────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ─── Logs & Coverage ───────────────────────────────────────────────────────────
+*.log
+coverage/
+lcov.info

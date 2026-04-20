@@ -1,0 +1,33 @@
+{
+  "brandId": "voltride",
+  "appName": "VoltRide",
+  "tagline": "Charge Your Journey",
+  "primaryColor": "0xFF6200EA",
+  "primaryDarkColor": "0xFF0A00B6",
+  "primaryLightColor": "0xFF9D46FF",
+  "secondaryColor": "0xFFFF6D00",
+  "secondaryDarkColor": "0xFFC43C00",
+  "secondaryLightColor": "0xFFFF9E40",
+  "fontFamily": "Poppins",
+  "logoFile": "logo.svg",
+  "logoDarkFile": "logo_dark.svg",
+  "logoLightFile": "logo.svg",
+  "splashFile": "splash.png",
+  "supportEmail": "help@voltride.in",
+  "supportPhone": "+91-9999000002",
+  "currency": "INR",
+  "currencySymbol": "₹",
+  "countryCode": "IN",
+  "defaultLocale": "en",
+  "features": {
+    "enableStripe": true,
+    "enableRazorpay": true,
+    "enableWallet": true,
+    "enableSubscriptions": false,
+    "enableSOS": true,
+    "enableHubApp": true,
+    "enableAdminPanel": true,
+    "enableReferrals": false,
+    "enableDynamicPricing": true
+  }
+}

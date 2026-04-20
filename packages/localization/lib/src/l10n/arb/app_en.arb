@@ -1,0 +1,132 @@
+{
+  "@@locale": "en",
+
+  "appName": "EV Ride",
+  "@appName": { "description": "App name shown in app bar" },
+
+  "continueButton": "Continue",
+  "cancelButton": "Cancel",
+  "confirmButton": "Confirm",
+  "retryButton": "Try Again",
+  "saveButton": "Save",
+  "doneButton": "Done",
+  "okButton": "OK",
+
+  "errorGeneric": "Something went wrong. Please try again.",
+  "errorNoInternet": "No internet connection.",
+  "errorTimeout": "Request timed out. Please try again.",
+  "errorUnauthorized": "Session expired. Please log in again.",
+
+  "navHome": "Home",
+  "navRides": "Rides",
+  "navWallet": "Wallet",
+  "navProfile": "Profile",
+
+  "authWelcome": "Welcome to {appName}",
+  "@authWelcome": {
+    "placeholders": {
+      "appName": { "type": "String" }
+    }
+  },
+  "authSubtitle": "Enter your phone number to get started",
+  "authPhoneLabel": "Phone Number",
+  "authPhoneHint": "Enter your 10-digit number",
+  "authSendOtp": "Send OTP",
+  "authVerifyOtp": "Verify OTP",
+  "authOtpSent": "OTP sent to {phone}",
+  "@authOtpSent": {
+    "placeholders": {
+      "phone": { "type": "String" }
+    }
+  },
+  "authResendOtp": "Resend OTP",
+  "authResendIn": "Resend in {seconds}s",
+  "@authResendIn": {
+    "placeholders": {
+      "seconds": { "type": "int" }
+    }
+  },
+
+  "homeSearchPlaceholder": "Search locations, scooters...",
+  "homeNearbyVehicles": "Nearby Vehicles",
+  "homeNoVehiclesNearby": "No vehicles nearby",
+  "homeNoVehiclesSubtitle": "Try moving to a different location",
+
+  "vehicleAvailable": "Available",
+  "vehicleInRide": "In Ride",
+  "vehicleOffline": "Offline",
+  "vehicleLowBattery": "Low Battery",
+  "vehicleBattery": "{level}% battery",
+  "@vehicleBattery": {
+    "placeholders": {
+      "level": { "type": "int" }
+    }
+  },
+  "vehicleDistance": "{km} km away",
+  "@vehicleDistance": {
+    "placeholders": {
+      "km": { "type": "String" }
+    }
+  },
+  "vehicleRatePerMin": "{rate}/min",
+  "@vehicleRatePerMin": {
+    "placeholders": {
+      "rate": { "type": "String" }
+    }
+  },
+
+  "rideUnlockScooter": "Unlock Scooter",
+  "rideScanQr": "Scan QR Code",
+  "rideEnterCode": "Enter vehicle code",
+  "rideStarted": "Ride Started",
+  "rideActive": "Active Ride",
+  "rideDuration": "{minutes} min {seconds} sec",
+  "@rideDuration": {
+    "placeholders": {
+      "minutes": { "type": "int" },
+      "seconds": { "type": "int" }
+    }
+  },
+  "rideDistance": "{km} km",
+  "@rideDistance": {
+    "placeholders": {
+      "km": { "type": "String" }
+    }
+  },
+  "rideFare": "Fare: {amount}",
+  "@rideFare": {
+    "placeholders": {
+      "amount": { "type": "String" }
+    }
+  },
+  "rideEndRide": "End Ride",
+  "rideConfirmEnd": "End this ride?",
+  "rideConfirmEndSubtitle": "You will be charged for the total duration.",
+  "rideCompleted": "Ride Complete!",
+  "rideTotalFare": "Total: {amount}",
+  "@rideTotalFare": {
+    "placeholders": {
+      "amount": { "type": "String" }
+    }
+  },
+  "rideHistory": "Ride History",
+  "rideNoHistory": "No rides yet",
+  "rideNoHistorySubtitle": "Your completed rides will appear here",
+
+  "walletBalance": "Balance",
+  "walletAddMoney": "Add Money",
+  "walletTransactions": "Transactions",
+  "walletNoTransactions": "No transactions yet",
+  "walletTopupSuccess": "Wallet topped up successfully",
+
+  "profileTitle": "Profile",
+  "profileName": "Full Name",
+  "profilePhone": "Phone Number",
+  "profileEmail": "Email Address",
+  "profileEditProfile": "Edit Profile",
+  "profileLogout": "Log Out",
+  "profileLogoutConfirm": "Are you sure you want to log out?",
+  "profileSupport": "Help & Support",
+  "profilePrivacy": "Privacy Policy",
+  "profileTerms": "Terms of Service"
+}

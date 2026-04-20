@@ -1,0 +1,87 @@
+name: rider_app
+description: EV Platform — Rider App
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.3.0 <4.0.0"
+  flutter: ">=3.19.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+
+  # Internal packages
+  design_system:
+    path: ../../packages/design_system
+  localization:
+    path: ../../packages/localization
+  shared_ui:
+    path: ../../packages/shared_ui
+  assets_registry:
+    path: ../../packages/assets_registry
+  brand_config:
+    path: ../../packages/brand_config
+  core_flutter:
+    path: ../../packages/core_flutter
+
+  # State management
+  flutter_bloc: ^8.1.3
+  equatable: ^2.0.5
+
+  # Navigation
+  go_router: ^13.0.0
+
+  # DI
+  get_it: ^7.6.7
+  injectable: ^2.3.2
+
+  # Data
+  freezed_annotation: ^2.4.1
+  json_annotation: ^4.8.1
+
+  # Maps & Location
+  google_maps_flutter: ^2.5.3
+  geolocator: ^11.0.0
+
+  # QR
+  mobile_scanner: ^4.0.0
+
+  # Payments
+  razorpay_flutter: ^1.3.6
+
+  # Realtime
+  socket_io_client: ^2.0.3
+
+  # Storage
+  flutter_secure_storage: ^9.0.0
+
+  # Animations
+  lottie: ^3.1.0
+
+  # SVG
+  flutter_svg: ^2.0.10+1
+
+  # Networking
+  dio: ^5.4.0
+  dartz: ^0.10.1
+
+  # Utils
+  intl: ^0.19.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  build_runner: ^2.4.8
+  freezed: ^2.4.5
+  json_serializable: ^6.7.1
+  injectable_generator: ^2.4.1
+  bloc_test: ^9.1.5
+  mocktail: ^1.0.1
+
+flutter:
+  generate: true
+  uses-material-design: true
+  assets:
+    - assets/brand/

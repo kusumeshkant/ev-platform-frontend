@@ -1,0 +1,33 @@
+{
+  "brandId": "ecobike",
+  "appName": "EcoBike",
+  "tagline": "Ride Green, Ride Smart",
+  "primaryColor": "0xFF00C853",
+  "primaryDarkColor": "0xFF009624",
+  "primaryLightColor": "0xFF5EFC82",
+  "secondaryColor": "0xFF1565C0",
+  "secondaryDarkColor": "0xFF003C8F",
+  "secondaryLightColor": "0xFF5E92F3",
+  "fontFamily": "Poppins",
+  "logoFile": "logo.svg",
+  "logoDarkFile": "logo_dark.svg",
+  "logoLightFile": "logo.svg",
+  "splashFile": "splash.png",
+  "supportEmail": "support@ecobike.in",
+  "supportPhone": "+91-9999000001",
+  "currency": "INR",
+  "currencySymbol": "₹",
+  "countryCode": "IN",
+  "defaultLocale": "en",
+  "features": {
+    "enableStripe": false,
+    "enableRazorpay": true,
+    "enableWallet": true,
+    "enableSubscriptions": true,
+    "enableSOS": true,
+    "enableHubApp": true,
+    "enableAdminPanel": true,
+    "enableReferrals": true,
+    "enableDynamicPricing": false
+  }
+}

@@ -1,0 +1,21 @@
+name: core_flutter
+description: EV Platform core utilities: network, storage, DI, error handling, logging.
+version: 1.0.0
+
+environment:
+  sdk: ">=3.3.0 <4.0.0"
+  flutter: ">=3.19.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  dio: ^5.4.0
+  get_it: ^7.6.7
+  injectable: ^2.3.2
+  flutter_secure_storage: ^9.0.0
+  dartz: ^0.10.1
+  shared_preferences: ^2.2.2
+
+dev_dependencies:
+  injectable_generator: ^2.4.1
+  build_runner: ^2.4.8

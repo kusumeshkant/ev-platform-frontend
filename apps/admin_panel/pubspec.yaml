@@ -1,0 +1,34 @@
+name: admin_panel
+description: EV Platform — Admin Panel (Web + Desktop)
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.3.0 <4.0.0"
+  flutter: ">=3.19.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  design_system:
+    path: ../../packages/design_system
+  shared_ui:
+    path: ../../packages/shared_ui
+  assets_registry:
+    path: ../../packages/assets_registry
+  brand_config:
+    path: ../../packages/brand_config
+  core_flutter:
+    path: ../../packages/core_flutter
+  localization:
+    path: ../../packages/localization
+  flutter_bloc: ^8.1.3
+  equatable: ^2.0.5
+  go_router: ^13.0.0
+  get_it: ^7.6.7
+  dio: ^5.4.0
+  dartz: ^0.10.1
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/brand/
